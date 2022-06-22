@@ -8,7 +8,7 @@ import Content from "../components/content"
 import { graphql, PageProps } from "gatsby"
 import { ContactUsPageQuery } from "../graphql-types"
 
-const ContactUsPage = ({ data }: PageProps<ContactUsPageQuery>) => {
+export default function ContactUsPage({ data }: PageProps<ContactUsPageQuery>) {
   const { contactFormAction } = useSiteMetadata()
   const {
     frontmatter: { title, description },
@@ -22,7 +22,7 @@ const ContactUsPage = ({ data }: PageProps<ContactUsPageQuery>) => {
       noGap
       className={"bg-white"}
     >
-      <Hero title={"Contact Us"} titleColor={"text-white"} />
+      <Hero title={"Contact Us"} />
       <div className={"flex-grow"}>
         <Container vGap centered>
           <div className={"flex flex-col gap-lg"}>
@@ -37,7 +37,7 @@ const ContactUsPage = ({ data }: PageProps<ContactUsPageQuery>) => {
 
 export const query = graphql`
   query ContactUsPage {
-    markdownRemark(frontmatter: { slug: { eq: "contact-us" } }) {
+    markdownRemark(frontmatter: { internal__id: { eq: "contact" } }) {
       html
       frontmatter {
         title
@@ -46,5 +46,3 @@ export const query = graphql`
     }
   }
 `
-
-export default ContactUsPage

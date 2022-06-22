@@ -6,7 +6,7 @@ import Content from "../components/content"
 import { graphql, PageProps } from "gatsby"
 import { MarkdownPageQuery } from "../graphql-types"
 
-const MarkdownPage = ({ data }: PageProps<MarkdownPageQuery>) => {
+export default function MarkdownPage({ data }: PageProps<MarkdownPageQuery>) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const { title, description } = frontmatter
@@ -18,7 +18,7 @@ const MarkdownPage = ({ data }: PageProps<MarkdownPageQuery>) => {
       noGap
       className={"bg-white"}
     >
-      <Hero title={"Contact Us"} titleColor={"text-body"} />
+      <Hero title={title} />
       <div className={"flex-grow"}>
         <Container className={"py-10 justify-center"}>
           <div className={"flex flex-col gap-lg"}>
@@ -41,5 +41,3 @@ export const query = graphql`
     }
   }
 `
-
-export default MarkdownPage

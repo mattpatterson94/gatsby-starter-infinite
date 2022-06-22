@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Logo from "../components/logo"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
-const NotFoundPage = () => {
+export default function NotFoundPage() {
   const { name, authorUrl } = useSiteMetadata()
 
   return (
@@ -52,5 +52,3 @@ const NotFoundPage = () => {
     </div>
   )
 }
-
-export default NotFoundPage

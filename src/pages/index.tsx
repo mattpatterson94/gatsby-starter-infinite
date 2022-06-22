@@ -4,10 +4,7 @@ import Container from "../components/container"
 import Hero from "../components/hero"
 import Heading from "../components/heading"
 import Content from "../components/content"
-// import { PageProps } from "gatsby"
-// import { HomePageQuery } from "../graphql-types"
 
-// export default function IndexPage(props: PageProps<HomePageQuery>) {
 export default function IndexPage() {
   return (
     <Layout noGap>

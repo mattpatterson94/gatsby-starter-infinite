@@ -1,6 +1,6 @@
 ---
+internal__id: about
 title: About
-slug: about
 description: About
 ---
 # Hello

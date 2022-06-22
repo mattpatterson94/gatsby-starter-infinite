@@ -668,6 +668,7 @@ export enum FileFieldsEnum {
   childMarkdownRemark___excerptAst = "childMarkdownRemark___excerptAst",
   childMarkdownRemark___fileAbsolutePath = "childMarkdownRemark___fileAbsolutePath",
   childMarkdownRemark___frontmatter___description = "childMarkdownRemark___frontmatter___description",
+  childMarkdownRemark___frontmatter___internal__id = "childMarkdownRemark___frontmatter___internal__id",
   childMarkdownRemark___frontmatter___slug = "childMarkdownRemark___frontmatter___slug",
   childMarkdownRemark___frontmatter___title = "childMarkdownRemark___frontmatter___title",
   /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
@@ -835,6 +836,7 @@ export enum FileFieldsEnum {
   childrenMarkdownRemark___excerptAst = "childrenMarkdownRemark___excerptAst",
   childrenMarkdownRemark___fileAbsolutePath = "childrenMarkdownRemark___fileAbsolutePath",
   childrenMarkdownRemark___frontmatter___description = "childrenMarkdownRemark___frontmatter___description",
+  childrenMarkdownRemark___frontmatter___internal__id = "childrenMarkdownRemark___frontmatter___internal__id",
   childrenMarkdownRemark___frontmatter___slug = "childrenMarkdownRemark___frontmatter___slug",
   childrenMarkdownRemark___frontmatter___title = "childrenMarkdownRemark___frontmatter___title",
   /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
@@ -1816,6 +1818,7 @@ export enum MarkdownRemarkFieldsEnum {
   excerptAst = "excerptAst",
   fileAbsolutePath = "fileAbsolutePath",
   frontmatter___description = "frontmatter___description",
+  frontmatter___internal__id = "frontmatter___internal__id",
   frontmatter___slug = "frontmatter___slug",
   frontmatter___title = "frontmatter___title",
   /** @deprecated Sorting on fields that need arguments to resolve is deprecated. */
@@ -1912,12 +1915,14 @@ export type MarkdownRemarkFilterListInput = {
 export type MarkdownRemarkFrontmatter = {
   __typename?: "MarkdownRemarkFrontmatter"
   description: Maybe<Scalars["String"]>
+  internal__id: Maybe<Scalars["String"]>
   slug: Maybe<Scalars["String"]>
   title: Maybe<Scalars["String"]>
 }
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   description: InputMaybe<StringQueryOperatorInput>
+  internal__id: InputMaybe<StringQueryOperatorInput>
   slug: InputMaybe<StringQueryOperatorInput>
   title: InputMaybe<StringQueryOperatorInput>
 }

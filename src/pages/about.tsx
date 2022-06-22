@@ -6,7 +6,7 @@ import Content from "../components/content"
 import { graphql, PageProps } from "gatsby"
 import { AboutPageQuery } from "../graphql-types"
 
-const AboutPage = ({ data }: PageProps<AboutPageQuery>) => {
+export default function AboutPage({ data }: PageProps<AboutPageQuery>) {
   const {
     frontmatter: { title, description },
     html,
@@ -33,7 +33,7 @@ const AboutPage = ({ data }: PageProps<AboutPageQuery>) => {
 
 export const query = graphql`
   query AboutPage {
-    markdownRemark(frontmatter: { slug: { eq: "about" } }) {
+    markdownRemark(frontmatter: { internal__id: { eq: "about" } }) {
       html
       frontmatter {
         title
@@ -42,5 +42,3 @@ export const query = graphql`
     }
   }
 `
-
-export default AboutPage
