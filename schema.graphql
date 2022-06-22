@@ -890,6 +890,8 @@ type SitePluginGroupConnection {
 }
 
 type SiteSiteMetadata {
+    authorName: String
+    authorUrl: String
     contactFormAction: String
     description: String
     name: String
@@ -1902,6 +1904,8 @@ enum SiteFieldsEnum {
     pathPrefix
     polyfill
     port
+    siteMetadata___authorName
+    siteMetadata___authorUrl
     siteMetadata___contactFormAction
     siteMetadata___description
     siteMetadata___name
@@ -2681,6 +2685,8 @@ input SitePluginSortInput {
 }
 
 input SiteSiteMetadataFilterInput {
+    authorName: StringQueryOperatorInput
+    authorUrl: StringQueryOperatorInput
     contactFormAction: StringQueryOperatorInput
     description: StringQueryOperatorInput
     name: StringQueryOperatorInput

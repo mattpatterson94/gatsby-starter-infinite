@@ -2,19 +2,25 @@ import * as React from "react"
 
 interface SignatureProps {
   className?: string
+  authorName: string
+  authorUrl: string
 }
 
-export default function Signature({ className }: SignatureProps) {
+export default function Signature({
+  authorName,
+  authorUrl,
+  className,
+}: SignatureProps) {
   return (
     <p className={className}>
       Site by{" "}
       <a
         target={"_blank"}
-        href={"https://mattdoesdev.com"}
+        href={authorUrl}
         className={"hover:underline"}
         rel="noreferrer"
       >
-        mattdoesdev
+        {authorName}
       </a>
     </p>
   )

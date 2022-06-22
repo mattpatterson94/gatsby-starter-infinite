@@ -51,7 +51,7 @@ function FooterList<T = any>({
 }
 
 export default function Footer() {
-  const { title } = useSiteMetadata()
+  const { title, authorName, authorUrl } = useSiteMetadata()
 
   return (
     <div>
@@ -146,7 +146,7 @@ export default function Footer() {
               "flex text-xs md:text-sm text-center gap-4 sm:text-left sm:gap-8"
             }
           >
-            <Signature />
+            <Signature authorName={authorName} authorUrl={authorUrl} />
           </div>
         </Container>
       </div>

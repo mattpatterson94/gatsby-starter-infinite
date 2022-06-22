@@ -2663,6 +2663,8 @@ export enum SiteFieldsEnum {
   pathPrefix = "pathPrefix",
   polyfill = "polyfill",
   port = "port",
+  siteMetadata___authorName = "siteMetadata___authorName",
+  siteMetadata___authorUrl = "siteMetadata___authorUrl",
   siteMetadata___contactFormAction = "siteMetadata___contactFormAction",
   siteMetadata___description = "siteMetadata___description",
   siteMetadata___name = "siteMetadata___name",
@@ -3419,6 +3421,8 @@ export type SitePluginSortInput = {
 
 export type SiteSiteMetadata = {
   __typename?: "SiteSiteMetadata"
+  authorName: Maybe<Scalars["String"]>
+  authorUrl: Maybe<Scalars["String"]>
   contactFormAction: Maybe<Scalars["String"]>
   description: Maybe<Scalars["String"]>
   name: Maybe<Scalars["String"]>
@@ -3427,6 +3431,8 @@ export type SiteSiteMetadata = {
 }
 
 export type SiteSiteMetadataFilterInput = {
+  authorName: InputMaybe<StringQueryOperatorInput>
+  authorUrl: InputMaybe<StringQueryOperatorInput>
   contactFormAction: InputMaybe<StringQueryOperatorInput>
   description: InputMaybe<StringQueryOperatorInput>
   name: InputMaybe<StringQueryOperatorInput>
@@ -3479,6 +3485,8 @@ export type SiteMetadataQuery = {
       description: string
       siteUrl: string
       contactFormAction: string
+      authorUrl: string
+      authorName: string
     }
   }
 }

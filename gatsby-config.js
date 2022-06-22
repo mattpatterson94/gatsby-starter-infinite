@@ -9,6 +9,8 @@ module.exports = {
     description: `Some details about my site`,
     siteUrl: process.env.SITE_URL,
     contactFormAction: "<changeme>",
+    authorName: "Mattdoesdev",
+    authorUrl: "https://mattdoesdev.com",
   },
   flags: {
     FAST_DEV: true,

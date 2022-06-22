@@ -12,6 +12,8 @@ export default function useSiteMetadata() {
             description
             siteUrl
             contactFormAction
+            authorUrl
+            authorName
           }
         }
       }

@@ -4,15 +4,15 @@ import Logo from "../components/logo"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
 const NotFoundPage = () => {
-  const siteMetadata = useSiteMetadata()
+  const { name, authorUrl } = useSiteMetadata()
 
   return (
     <div className="min-h-screen pt-16 pb-12 flex flex-col bg-white">
       <main className="flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flexp-shrink-0 flex justify-center">
+        <div className="flex-shrink-0 flex justify-center">
           <Link className={"inline-flex"} to="/">
-            <span className="sr-only">{siteMetadata.name}</span>
-            <Logo alt={siteMetadata.name} width={350} />
+            <span className="sr-only">{name}</span>
+            <Logo alt={name} width={350} />
           </Link>
         </div>
         <div className="py-16">
@@ -42,7 +42,7 @@ const NotFoundPage = () => {
       <footer className="flex-shrink-0 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex justify-center space-x-4">
           <a
-            href="https://www.mattdoesdev.com"
+            href={authorUrl}
             className="text-sm font-medium text-gray-500 hover:text-gray-800"
           >
             Contact Support
