@@ -3491,6 +3491,36 @@ export type SiteMetadataQuery = {
   }
 }
 
+export type AboutPageQueryVariables = Exact<{ [key: string]: never }>
+
+export type AboutPageQuery = {
+  __typename?: "Query"
+  markdownRemark: {
+    __typename?: "MarkdownRemark"
+    html: string
+    frontmatter: {
+      __typename?: "MarkdownRemarkFrontmatter"
+      title: string
+      description: string
+    }
+  }
+}
+
+export type ContactUsPageQueryVariables = Exact<{ [key: string]: never }>
+
+export type ContactUsPageQuery = {
+  __typename?: "Query"
+  markdownRemark: {
+    __typename?: "MarkdownRemark"
+    html: string
+    frontmatter: {
+      __typename?: "MarkdownRemarkFrontmatter"
+      title: string
+      description: string
+    }
+  }
+}
+
 export type MarkdownPageQueryVariables = Exact<{
   id: Scalars["String"]
 }>

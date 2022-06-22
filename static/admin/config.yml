@@ -16,6 +16,32 @@ collections:
   - label: Pages
     name: pages
     files:
+      - label: Contact
+        name: contact
+        file: site/content/pages/contact-us.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+      - label: About
+        name: about
+        file: site/content/pages/about.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
       - label: Terms and Conditions
         name: terms-and-conditions
         file: site/content/pages/terms-and-conditions.md

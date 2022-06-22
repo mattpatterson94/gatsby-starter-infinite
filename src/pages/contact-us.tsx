@@ -5,14 +5,20 @@ import Container from "../components/container"
 import Hero from "../components/hero"
 import ContactForm from "../partials/page/contact-form"
 import Content from "../components/content"
+import { graphql, PageProps } from "gatsby"
+import { ContactUsPageQuery } from "../graphql-types"
 
-const ContactUsPage = () => {
-  const { contactFormAction, title } = useSiteMetadata()
+const ContactUsPage = ({ data }: PageProps<ContactUsPageQuery>) => {
+  const { contactFormAction } = useSiteMetadata()
+  const {
+    frontmatter: { title, description },
+    html,
+  } = data.markdownRemark
 
   return (
     <Layout
-      title={"Contact Us"}
-      description={`At ${title} we value your feedback. We wish to tailor the site to our users to provide them with the best experience. If you have noticed a bug, or have thought of a cool new feature we should add, please let us know in the form below!`}
+      title={title}
+      description={description}
       noGap
       className={"bg-white"}
     >
@@ -20,15 +26,7 @@ const ContactUsPage = () => {
       <div className={"flex-grow"}>
         <Container vGap centered>
           <div className={"flex flex-col gap-lg"}>
-            <Content>
-              <p>
-                At {title} we value your feedback. We wish to tailor the site to
-                our users to provide them with the best experience. If you have
-                noticed a bug, or have thought of a cool new feature we should
-                add, please let us know in the form below!
-              </p>
-            </Content>
-
+            <Content html={html} />
             <ContactForm action={contactFormAction} />
           </div>
         </Container>
@@ -36,5 +34,17 @@ const ContactUsPage = () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query ContactUsPage {
+    markdownRemark(frontmatter: { slug: { eq: "contact-us" } }) {
+      html
+      frontmatter {
+        title
+        description
+      }
+    }
+  }
+`
 
 export default ContactUsPage
