@@ -1,0 +1,44 @@
+#backend:
+#  name: git-gateway
+#  branch: main
+
+# TESTING
+backend:
+  name: test-repo
+
+local_backend: true
+
+site_url: https://www.example.com
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - label: Pages
+    name: pages
+    files:
+      - label: Terms and Conditions
+        name: terms-and-conditions
+        file: site/content/pages/terms-and-conditions.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+      - label: Privacy Policy
+        name: privacy-policy
+        file: site/content/pages/privacy-policy.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown

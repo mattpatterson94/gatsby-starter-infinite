@@ -1,0 +1,31 @@
+[build]
+  publish = "public/"
+  command = "yarn build"
+
+[[plugins]]
+  # Installs the Lighthouse Build Plugin for all deploy contexts
+  package = "@netlify/plugin-lighthouse"
+
+# Production context: all deploys from the Production branch
+# set in your site’s Branches settings in the UI will inherit
+# these settings. You can define environment variables
+# here but we recommend using the Netlify UI for sensitive
+# values to keep them out of your source repository.
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+# Deploy Preview context: all deploys generated from
+# a pull/merge request will inherit these settings.
+[context.deploy-preview]
+  environment = { NODE_ENV = "staging" }
+
+# Branch Deploy context: all deploys that are not from
+# a pull/merge request or from the Production branch
+# will inherit these settings.
+[context.branch-deploy]
+  environment = { NODE_ENV = "development" }
+
+# Specific branch context: all deploys from
+# this specific branch will inherit these settings.
+[context.staging] # “staging” is a branch name
+  environment = { NODE_ENV = "staging" }

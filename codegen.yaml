@@ -1,0 +1,17 @@
+overwrite: true
+schema: http://localhost:8000/___graphql
+documents:
+  - ./src/**/*.{ts,tsx}
+generates:
+  ./src/graphql-types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+    config:
+      avoidOptionals: true
+      maybeValue: "T"
+      namingConvention:
+        enumValues: "keep"
+hooks:
+  afterOneFileWrite:
+    - eslint --fix
