@@ -20,6 +20,10 @@ collections:
         name: contact
         file: site/content/pages/contact-us.md
         fields:
+          - label: ID
+            name: internal__id
+            widget: hidden
+            default: contact
           - label: Title
             name: title
             widget: string
@@ -33,6 +37,10 @@ collections:
         name: about
         file: site/content/pages/about.md
         fields:
+          - label: ID
+            name: internal__id
+            widget: hidden
+            default: about
           - label: Title
             name: title
             widget: string
