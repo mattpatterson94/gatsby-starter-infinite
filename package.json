@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-mattdoesdev",
+  "name": "gatsby-starter-infinite",
   "private": true,
   "description": "Get started with GatsbyJS straight away without having to spend a whole day configuring your usual addons.",
   "version": "0.1.0",
@@ -81,9 +81,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mattpatterson94/gatsby-starter-mattdoesdev"
+    "url": "https://github.com/mattpatterson94/gatsby-starter-infinite"
   },
   "bugs": {
-    "url": "https://github.com/mattpatterson94/gatsby-starter-mattdoesdev/issues"
+    "url": "https://github.com/mattpatterson94/gatsby-starter-infinite/issues"
   }
 }

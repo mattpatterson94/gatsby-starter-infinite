@@ -2,7 +2,7 @@
   <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
 </a>
 
-# Gatsby Starter Mattdoesdev
+# Gatsby Starter Infinite
 
 Get started with GatsbyJS straight away without having to spend a whole day configuring your usual addons.
 
@@ -22,7 +22,7 @@ This starter includes:
    Use the Gatsby CLI to get started locally:
 
    ```sh repo
-   npx gatsby new my-site https://github.com/mattpatterson94/gatsby-starter-mattdoesdev
+   npx gatsby new my-site https://github.com/mattpatterson94/gatsby-starter-infinite
    ```
 
 1. **Configure Gatsby**
