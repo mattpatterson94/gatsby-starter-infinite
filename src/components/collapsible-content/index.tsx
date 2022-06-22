@@ -16,10 +16,10 @@ export default function CollapsibleContent({
   const [visible, setVisible] = React.useState(false)
 
   return (
-    <div className={classNames(className, "flex flex-col gap-4")}>
+    <div className={classNames(className, "flex flex-col gap-md")}>
       <button
         onClick={() => setVisible(!visible)}
-        className={"flex items-center justify-between border-b-2 pb-2"}
+        className={"flex items-center justify-between border-b-2 pb-sm"}
       >
         <Heading size={"xsmall"}>{title}</Heading>
         {visible ? <FaAngleDown /> : <FaAngleRight />}

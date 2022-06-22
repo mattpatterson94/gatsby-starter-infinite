@@ -5,6 +5,9 @@ type ContainerProps = {
   id?: string
   className?: string
   fullWidth?: boolean
+  centered?: boolean
+  vGap?: boolean
+  hGap?: boolean
   style?: React.CSSProperties
   breakpoint?: "" | "xs" | "sm" | "md" | "lg" | "xl"
 }
@@ -14,6 +17,9 @@ export default function Container({
   className,
   fullWidth = false,
   breakpoint = "",
+  centered = false,
+  vGap = false,
+  hGap = true,
   children,
   style,
 }: React.PropsWithChildren<ContainerProps>) {
@@ -30,9 +36,12 @@ export default function Container({
     <div
       id={id}
       style={style}
-      className={classNames("mx-auto flex px-4", className, {
+      className={classNames("mx-auto flex", className, {
         "max-w-full w-full": fullWidth,
         [containerClass[breakpoint]]: !fullWidth,
+        "py-lg md:py-xl": vGap,
+        "px-md": hGap,
+        "justify-center": centered,
       })}
     >
       {children}

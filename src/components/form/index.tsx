@@ -3,13 +3,14 @@ import ReCAPTCHA from "react-google-recaptcha"
 import { buttonClasses, themes, hoverThemes } from "../button"
 import classNames from "classnames"
 
-export interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
+export interface FormProps
+  extends Omit<React.FormHTMLAttributes<HTMLFormElement>, "children"> {
   children: (inputClasses: string) => React.ReactElement
 }
 
 export default function Form({ children, ...props }: FormProps) {
   const inputClasses =
-    "transition-colors focus:border-blue-500 focus:ring-transparent outline-none placeholder-black pb-2 border-b-2 border-black"
+    "transition-colors focus:border-primary focus:ring-transparent outline-none placeholder-body pb-2 border-b-2 border-body"
 
   const [sending, setSending] = React.useState<boolean>(false)
   const [sent, setSent] = React.useState<boolean>(false)
@@ -49,7 +50,7 @@ export default function Form({ children, ...props }: FormProps) {
       {...props}
       ref={form}
       onSubmit={handleSubmit}
-      className={classNames("flex flex-col gap-8", props.className)}
+      className={classNames("flex flex-col gap-lg", props.className)}
     >
       <input
         name="subject"
@@ -61,7 +62,7 @@ export default function Form({ children, ...props }: FormProps) {
 
       {children?.(inputClasses)}
 
-      <div className="mb-8 m-auto">
+      <div className="m-auto">
         <ReCAPTCHA
           sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"
           theme="light"
@@ -84,7 +85,7 @@ export default function Form({ children, ...props }: FormProps) {
       {formMessage && <p>{formMessage}</p>}
     </form>
   ) : (
-    <div className={"pt-5 lg:pt-20 pb-10"}>
+    <div>
       <p className={"font-semibold"}>{formMessage}</p>
     </div>
   )

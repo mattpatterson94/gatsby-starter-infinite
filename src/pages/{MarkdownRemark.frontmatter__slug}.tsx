@@ -18,10 +18,10 @@ const MarkdownPage = ({ data }: PageProps<MarkdownPageQuery>) => {
       noGap
       className={"bg-white"}
     >
-      <Hero title={"Contact Us"} titleColor={"text-gray-800"} />
+      <Hero title={"Contact Us"} titleColor={"text-body"} />
       <div className={"flex-grow"}>
         <Container className={"py-10 justify-center"}>
-          <div className={"flex flex-col gap-8"}>
+          <div className={"flex flex-col gap-lg"}>
             <Content html={html} />
           </div>
         </Container>

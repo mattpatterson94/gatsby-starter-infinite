@@ -13,7 +13,7 @@ interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 export default function Heading({
   className = "",
   size = "medium",
-  color = "text-gray-800",
+  color = "text-heading",
   children,
   ...props
 }: React.PropsWithChildren<HeadingProps>) {

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Container from "../components/container"
 import Hero from "../components/hero"
 import ContactForm from "../partials/page/contact-form"
+import Content from "../components/content"
 
 const ContactUsPage = () => {
   const { contactFormAction, title } = useSiteMetadata()
@@ -15,18 +16,18 @@ const ContactUsPage = () => {
       noGap
       className={"bg-white"}
     >
-      <Hero title={"Contact Us"} titleColor={"text-gray-800"} />
+      <Hero title={"Contact Us"} titleColor={"text-white"} />
       <div className={"flex-grow"}>
-        <Container className={"py-10 justify-center"}>
-          <div className={"flex flex-col gap-8"}>
-            <div className={"prose"}>
+        <Container vGap centered>
+          <div className={"flex flex-col gap-lg"}>
+            <Content>
               <p>
                 At {title} we value your feedback. We wish to tailor the site to
                 our users to provide them with the best experience. If you have
                 noticed a bug, or have thought of a cool new feature we should
                 add, please let us know in the form below!
               </p>
-            </div>
+            </Content>
 
             <ContactForm action={contactFormAction} />
           </div>

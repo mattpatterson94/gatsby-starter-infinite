@@ -64,7 +64,7 @@ export default function Hero({
   return (
     <Container fullWidth className={"px-0"}>
       <div
-        className={"grid w-full bg-gray-100"}
+        className={"grid w-full bg-primary"}
         style={{ minHeight: 150, maxHeight: compact ? 150 : 450 }}
       >
         <HeroImage />
@@ -76,7 +76,7 @@ export default function Hero({
         >
           <div
             className={classNames(
-              "max-w-3xl text-center flex flex-col gap-6 px-4 py-6 md:py-0 justify-center bg-cover relative",
+              "max-w-3xl text-center flex flex-col gap-md px-md py-md md:py-0 justify-center bg-cover relative",
               className
             )}
           >

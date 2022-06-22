@@ -58,13 +58,13 @@ export default function Footer() {
       <footer
         id={"footer"}
         className={
-          "font-cursive text-white text-sm flex bg-neutral-700 justify-center items-center w-full p-6 lg:p-12"
+          "font-cursive text-white text-sm flex bg-primary justify-center items-center w-full p-md lg:p-lg"
         }
       >
         <Container
           breakpoint={"lg"}
           className={
-            "gap-6 px-0 mx-0 lg:px-4 lg:gap-12 justify-between w-full flex-col md:flex-row"
+            "gap-md px-0 mx-0 lg:px-md lg:gap-xl justify-between w-full flex-col md:flex-row"
           }
         >
           <div
@@ -91,7 +91,7 @@ export default function Footer() {
               renderTitle={item => item.name}
             />
           </div>
-          <div className={"hidden md:flex flex-col gap-4"}>
+          <div className={"hidden md:flex flex-col gap-md"}>
             <Heading size={"small"} color={"text-white"}>
               Column 2
             </Heading>
@@ -102,7 +102,7 @@ export default function Footer() {
               renderTitle={item => item.name}
             />
           </div>
-          <div className={"hidden md:flex flex-col gap-4"}>
+          <div className={"hidden md:flex flex-col gap-md"}>
             <Heading size={"small"} color={"text-white"}>
               Column 3
             </Heading>
@@ -115,18 +115,18 @@ export default function Footer() {
           </div>
         </Container>
       </footer>
-      <div className={"p-4"}>
+      <div className={"p-sm"}>
         <Container
           breakpoint={"lg"}
-          className={"justify-between items-center gap-2 flex-col md:flex-row"}
+          className={"justify-between items-center gap-sm flex-col md:flex-row"}
         >
           <div
             className={
-              "flex text-center text-xs md:text-sm gap-4 flex-col md:flex-row sm:text-left"
+              "flex text-center text-xs md:text-sm gap-sm flex-col md:flex-row sm:text-left"
             }
           >
             <Copyright />
-            <p className={"flex gap-4 mb-2 md:mb-0"}>
+            <p className={"flex gap-sm md:mb-0"}>
               <a
                 className={"hover:underline"}
                 href={urlHelpers.termsAndConditionsUrl()}
@@ -143,7 +143,7 @@ export default function Footer() {
           </div>
           <div
             className={
-              "flex text-xs md:text-sm text-center gap-4 sm:text-left sm:gap-8"
+              "flex text-xs md:text-sm text-center gap-sm sm:text-left sm:gap-lg"
             }
           >
             <Signature authorName={authorName} authorUrl={authorUrl} />

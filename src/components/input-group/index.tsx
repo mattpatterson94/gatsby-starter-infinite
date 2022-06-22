@@ -31,7 +31,7 @@ export default function InputGroup({
         <input
           {...input}
           className={classNames(
-            "focus:ring-gray-800 focus:border-gray-800 block w-full rounded-none rounded-l-md border-gray-300",
+            "focus:ring-body focus:border-body block w-full rounded-none rounded-l-md border-gray-300",
             input.className,
             { "pl-10": !!left },
             { "rounded-r-md": !right }
@@ -41,7 +41,7 @@ export default function InputGroup({
       {right && (
         <button
           type="button"
-          className="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 border border-gray-300 text-sm font-medium rounded-r-md text-gray-700 bg-gray-50 disabled:bg-gray-100 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-800 focus:border-gray-800"
+          className="-ml-px relative inline-flex items-center space-x-2 px-4 py-2 border border-gray-300 text-sm font-medium rounded-r-md text-body bg-gray-50 disabled:bg-gray-100 hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-body focus:border-body"
           {...right}
         >
           {right.children}

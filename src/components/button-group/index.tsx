@@ -25,7 +25,7 @@ export default function ButtonGroup({ className, links }: ButtonGroupProps) {
     >
       {filteredLinks.map((link, i) => {
         const buttonGroupClasses = classNames(
-          "relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-800 hover:bg-gray-100",
+          "relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-body hover:bg-gray-100",
           {
             "rounded-l-md": i === 0,
             "-mx-px": i !== 0,

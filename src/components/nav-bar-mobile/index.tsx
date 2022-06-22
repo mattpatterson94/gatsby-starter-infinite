@@ -28,7 +28,7 @@ const NavItem = ({ link, index }: { link: MenuItem; index: number }) => {
   return (
     <li>
       <Link
-        className={`flex gap-2 items-center uppercase font-semibold hover:text-blue-500 focus:text-blue-500 text-black px-5 py-2 ${linkClass}`}
+        className={`flex gap-2 items-center uppercase font-semibold hover:text-primary focus:text-primary text-body px-5 py-2 ${linkClass}`}
         to={link.path}
         onClick={() => setActive(!active)}
       >
@@ -47,7 +47,7 @@ const NavItem = ({ link, index }: { link: MenuItem; index: number }) => {
             <li key={`navbar-mobile-${index}-${subIndex}`}>
               <Link
                 className={classNames(
-                  "flex gap-2 items-center uppercase font-semibold hover:text-blue-500 focus:text-blue-500 text-black px-5 py-2",
+                  "flex gap-2 items-center uppercase font-semibold hover:text-primary focus:text-primary text-body px-5 py-2",
                   linkClass
                 )}
                 to={sublink.path}

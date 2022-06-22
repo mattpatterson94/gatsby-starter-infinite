@@ -18,8 +18,8 @@ export default function NavBar() {
     const currentActivePath = activePath(path)
 
     return classNames("py-4", {
-      "text-blue-500 px-2 py-4": currentActivePath,
-      "py-4 hover:text-blue-600 text-black": !currentActivePath,
+      "text-primary px-2 py-4": currentActivePath,
+      "py-4 hover:text-primary text-black": !currentActivePath,
     })
   }
 
@@ -27,8 +27,8 @@ export default function NavBar() {
     const currentActivePath = activePath(path)
 
     return classNames("font-normal p-2", {
-      "text-blue-500 block": currentActivePath,
-      "text-black block hover:text-blue-500": !currentActivePath,
+      "text-primary block": currentActivePath,
+      "text-black block hover:text-primary": !currentActivePath,
     })
   }
 
