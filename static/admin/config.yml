@@ -16,6 +16,20 @@ collections:
   - label: Pages
     name: pages
     files:
+      - label: Home
+        name: home
+        file: site/content/pages/home.md
+        fields:
+          - label: ID
+            name: internal__id
+            widget: hidden
+            default: home
+          - label: Hero Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
       - label: Contact
         name: contact
         file: site/content/pages/contact-us.md

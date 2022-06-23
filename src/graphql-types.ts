@@ -3526,6 +3526,21 @@ export type ContactUsPageQuery = {
   }
 }
 
+export type HomePageQueryVariables = Exact<{ [key: string]: never }>
+
+export type HomePageQuery = {
+  __typename?: "Query"
+  markdownRemark: {
+    __typename?: "MarkdownRemark"
+    html: string
+    frontmatter: {
+      __typename?: "MarkdownRemarkFrontmatter"
+      title: string
+      description: string
+    }
+  }
+}
+
 export type MarkdownPageQueryVariables = Exact<{
   id: Scalars["String"]
 }>
