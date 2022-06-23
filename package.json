@@ -65,6 +65,14 @@
   "keywords": [
     "gatsby"
   ],
+  "overrides": {
+    "gatsby-plugin-scroll-reveal": {
+      "react": "^17.0.1"
+    }
+  },
+  "resolutions": {
+    "gatsby-plugin-scroll-reveal/react": "^17.0.1"
+  },
   "license": "0BSD",
   "scripts": {
     "codegen": "graphql-codegen --config codegen.yaml",
