@@ -6,7 +6,7 @@
   "author": "Matt Patterson <hey@mattdoesdev.com>",
   "dependencies": {
     "@tailwindcss/forms": "^0.5.2",
-    "@tailwindcss/typography": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.4",
     "@types/react-google-recaptcha": "^2.1.5",
     "@types/react-helmet": "^6.1.5",
     "autoprefixer": "^10.4.2",
